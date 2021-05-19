@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
-import Head from '../../components/Head'
 import NewTask from '../NewTask'
+import TodoLists from '../TodoLists'
 /**
 * @author
 * @function TodoLists
@@ -11,9 +11,7 @@ const TodoPage = (props) => {
     return (
         <div className="container">
             <NewTask />
-            <div className="right-side">
-                <Head name="To Do List" />
-            </div>
+            <TodoLists />
         </div>
     )
 

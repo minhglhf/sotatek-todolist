@@ -7,8 +7,7 @@
   align-content: center;
   align-items: center;
   background-color: "yellow";
-  /* border-width: 1rem;
-      border-color: red; */
+  border: 1px solid black;
 }
 .form-container {
   width: 100%;

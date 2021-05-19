@@ -7,7 +7,13 @@ import './style.css'
 
 const TextInput = (props) => {
   return (
-    <input type="text" name="name" placeholder="Add new task ..." className="text-input" />
+    <input type="text" name="name"
+      placeholder={props.ph ? props.ph : "Add new task ..."}
+      className="text-input"
+      onChange={props.onChange}
+      value={props.value}
+      required={props.required ? true : false}
+    />
   )
 }
 

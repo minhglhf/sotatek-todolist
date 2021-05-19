@@ -9,11 +9,16 @@ const TextareaInput = (props) => {
   return (
     <div className="inputarea-with-label-container">
 
-      <label htmlFor="area-input">
-        Description
-      </label>
+      <div className="label-container">
+        <label htmlFor="area-input">
+          Description
+        </label>
+      </div>
 
-      <textarea id="area-input">
+
+      <textarea id="area-input"
+        onChange={props.onChange}
+        value={props.value}>
 
       </textarea>
     </div>

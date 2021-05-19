@@ -6,10 +6,11 @@ import './style.css'
 **/
 
 const Button = (props) => {
-  return(
-    <button className="button">Add</button>
-   )
+  const { h, w, bgc, fs, n, pd, mg } = props;
+  return (
+    <button className="button" style={{ width: w, height: h, backgroundColor: bgc, padding: pd, fontSize: fs, margin: mg }}>{n ? n : "Add"}</button>
+  )
 
- }
+}
 
 export default Button
