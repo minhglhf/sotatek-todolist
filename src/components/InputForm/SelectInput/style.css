@@ -1,0 +1,9 @@
+.input-with-label-container > select {
+  text-indent: 1rem;
+  width: 100%;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border: 1px solid grey;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}

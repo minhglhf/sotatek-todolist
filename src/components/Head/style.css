@@ -1,0 +1,13 @@
+.head-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.head-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    
+}

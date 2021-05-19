@@ -1,0 +1,15 @@
+.button {
+  background-color: #5cb85c;
+  border-radius: 0.25rem;
+  width: 90%;
+  border: none;
+  color: white;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  /* margin-top: 2rem; */
+  cursor: pointer;
+}
