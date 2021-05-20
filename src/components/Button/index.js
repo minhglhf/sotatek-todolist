@@ -6,9 +6,11 @@ import './style.css'
 **/
 
 const Button = (props) => {
-  const { h, w, bgc, fs, n, pd, mg } = props;
+  const { h, w, bgc, fs, n, pd, mg, ocl } = props;
   return (
-    <button className="button" style={{ width: w, height: h, backgroundColor: bgc, padding: pd, fontSize: fs, margin: mg }}>{n ? n : "Add"}</button>
+    <button className="button"
+      style={{ width: w, height: h, backgroundColor: bgc, padding: pd, fontSize: fs, margin: mg }}
+      onClick={ocl}>{n ? n : "Add"}</button>
   )
 
 }

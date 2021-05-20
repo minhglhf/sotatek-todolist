@@ -6,7 +6,6 @@ import "./style.css"
 * @function NewTask
 **/
 
-import Head from '../../components/Head'
 import TextareaInput from '../../components/InputForm/TextareaInput'
 import Button from '../../components/Button'
 import DateInput from '../../components/InputForm/DateInput'
@@ -26,19 +25,18 @@ const NewTask = (props) => {
   }
 
   return (
-    <div className="left-side">
-      <Head name="New Task" />
-      <form className="form-container" onSubmit={addTodo}>
-        <TextInput onChange={(e) => { setTodo({ ...todo, name: e.target.value }) }} value={todo.name} required />
-        <TextareaInput onChange={(e) => { setTodo({ ...todo, description: e.target.value }) }} value={todo.description} />
-        <div className="row-input">
-          <DateInput onChange={(e) => { setTodo({ ...todo, duedate: e.target.value }) }} value={todo.duedate} min={formatDate(new Date())} />
-          <SelectInput onChange={(e) => { setTodo({ ...todo, piority: e.target.value }) }} value={todo.piority} />
-        </div>
 
-        <Button />
-      </form>
-    </div>
+    <form className="form-container" onSubmit={addTodo}>
+      <TextInput onChange={(e) => { setTodo({ ...todo, name: e.target.value }) }} value={props.name ? props.name : todo.name} required />
+      <TextareaInput onChange={(e) => { setTodo({ ...todo, description: e.target.value }) }} value={props.description ? props.description : todo.description} />
+      <div className="row-input">
+        <DateInput onChange={(e) => { setTodo({ ...todo, duedate: e.target.value }) }} value={props.duedate ? props.duedate : todo.duedate} min={formatDate(new Date())} />
+        <SelectInput onChange={(e) => { setTodo({ ...todo, piority: e.target.value }) }} value={props.piority ? props.piority : todo.piority} />
+      </div>
+
+      <Button mg="0 0 2rem  0" n={props.bname}/>
+    </form>
+
 
   )
 }

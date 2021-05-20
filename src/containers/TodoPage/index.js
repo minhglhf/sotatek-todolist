@@ -2,6 +2,7 @@ import React from 'react'
 import './style.css'
 import NewTask from '../NewTask'
 import TodoLists from '../TodoLists'
+import Head from '../../components/Head'
 /**
 * @author
 * @function TodoLists
@@ -10,7 +11,10 @@ import TodoLists from '../TodoLists'
 const TodoPage = (props) => {
     return (
         <div className="container">
-            <NewTask />
+            <div className="left-side">
+                <Head name="New Task" />
+                <NewTask />
+            </div>
             <TodoLists />
         </div>
     )
