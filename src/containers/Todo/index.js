@@ -6,12 +6,21 @@ import './style.css'
 * @function TodoLists
 **/
 import { BsCheckBox, BsSquare } from 'react-icons/bs';
+import { useDispatch } from 'react-redux'
+import { deleteTodo } from '../../actions'
+
 const Todo = (props) => {
+
+    const dispatch = useDispatch();
 
     const ShowDetail = () => {
         // setOpenDetail(!openDetail);
-        if(props.detail === props.ind) props.setDetail(-1)
+        if (props.detail === props.ind) props.setDetail(-1)
         else props.setDetail(props.ind)
+    }
+
+    const removeTodo = (td) => {
+        dispatch(deleteTodo(td))
     }
 
 
@@ -26,8 +35,8 @@ const Todo = (props) => {
                     <p className="todo-name">{props.name}</p>
                 </div>
                 <div className="todo-right">
-                    <Button w="auto" bgc="#00bcd4" n="Detail" pd=".5rem 1rem" fs="1rem" mg=".8rem" ocl={ShowDetail} />
-                    <Button w="auto" bgc="#d9534f" n="Remove" pd=".5rem 1rem" fs="1rem" mg=".8rem" />
+                    <Button w="auto" bgc="#00bcd4" n="Detail" pd=".7rem 1rem" fs="1rem" mg=".8rem" ocl={ShowDetail} />
+                    <Button w="auto" bgc="#d9534f" n="Remove" pd=".7rem 1rem" fs="1rem" mg=".8rem" ocl={() => removeTodo(props.td)} />
                 </div>
 
             </div>

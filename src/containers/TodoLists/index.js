@@ -13,7 +13,7 @@ import './style.css'
 
 const TodoLists = (props) => {
     const [detail, setDetail] = useState(-1);
-    console.log(detail)
+
     const todoList = useSelector(state => state.todo)
     return (
         <div className="right-side">
@@ -28,6 +28,7 @@ const TodoLists = (props) => {
                                 description={td.description}
                                 duedate={td.duedate}
                                 piority={td.piority}
+                                td={td}
                                 ind={i}
                                 setDetail={setDetail}
                                 detail={detail}
@@ -35,7 +36,7 @@ const TodoLists = (props) => {
                             {
                                 detail === i ? (
                                     <div style={{ border: "1px solid black", borderTop: "none", width: "90%", display: "flex", flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center' }}>
-                                        <NewTask name={td.name} description={td.description} duedate={td.duedate} piority={td.piority} bname="Update" />
+                                        <NewTask id={td.id} name={td.name} description={td.description} duedate={td.duedate} piority={td.piority} bname="Update" />
                                     </div>
                                 ) : null
                             }
