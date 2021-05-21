@@ -74,7 +74,7 @@ const TodoLists = (props) => {
                             {
                                 detail === i ? (
                                     <div style={{ border: "1px solid black", borderTop: "none", width: "90%", display: "flex", flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center' }}>
-                                        <NewTask id={td.id} name={td.name} description={td.description} duedate={td.duedate} piority={td.piority} bname="Update" />
+                                        <NewTask setDetail={setDetail} id={td.id} name={td.name} description={td.description} duedate={td.duedate} piority={td.piority} bname="Update" />
                                     </div>
                                 ) : null
                             }

@@ -38,10 +38,11 @@ const NewTask = (props) => {
   }
   const updateTodo = (e) => {
     e.preventDefault();
-
+    
     let newTodo = {
       ...todo,
     }
+    props.setDetail(-1)
 
     dispatch(editTodo(newTodo))
     // setTodo({ id: "", name: "", description: "", duedate: formatDate(new Date()), piority: "normal" })
