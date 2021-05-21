@@ -38,6 +38,26 @@ export const deleteTodo = (todo) => {
     }
 }
 
+export const deleteCheckTodos = (todos) => {
+    console.log("cc",todos)
+    return async (dispatch) => {
+        try {
+
+            dispatch({
+                type: "REMOVE_TODOS_SUCCESS",
+                payload: {
+                    todos
+                }
+            })
+
+        }
+        catch (error) {
+            console.log(error)
+        }
+
+    }
+}
+
 export const editTodo = (todo) => {
     // console.log("update",todo)
     return async (dispatch) => {

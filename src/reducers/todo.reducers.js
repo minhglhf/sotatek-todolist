@@ -27,6 +27,21 @@ const todoReducer = (state = initState, action) => {
             }
             break;
         }
+        case "REMOVE_TODOS_SUCCESS": {
+            console.log(action.payload.todos)
+            let temp = state.todos;
+            action.payload.todos.map(td => {
+                let tempIn = temp.findIndex((te) => te.id === td.id)
+                temp.splice(tempIn, 1)
+            })
+            console.log(temp)
+            state = {
+                ...state,
+                todos: temp,
+                total: temp.length
+            }
+            break;
+        }
         case "EDIT_TODO_SUCCESS": {
             console.log(action.payload.todo)
             let temp = state.todos;

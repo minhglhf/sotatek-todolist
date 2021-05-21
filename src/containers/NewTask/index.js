@@ -42,6 +42,7 @@ const NewTask = (props) => {
     let newTodo = {
       ...todo,
     }
+
     dispatch(editTodo(newTodo))
     // setTodo({ id: "", name: "", description: "", duedate: formatDate(new Date()), piority: "normal" })
   }
@@ -55,9 +56,6 @@ const NewTask = (props) => {
         <DateInput onChange={(e) => { setTodo({ ...todo, duedate: e.target.value }) }} value={todo.duedate} min={formatDate(new Date())} />
         <SelectInput onChange={(e) => { setTodo({ ...todo, piority: e.target.value }) }} value={todo.piority} />
       </div>
-      {/* {
-        props.update ? <Button mg="0 0 2rem  0" n={props.bname} ocl={() => {console.log("cc")}}/> : <Button mg="0 0 2rem  0" n={props.bname} />
-      } */}
       <Button mg="0 0 2rem  0" n={props.bname} />
     </form>
 

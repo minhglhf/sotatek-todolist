@@ -3,6 +3,7 @@ import './style.css'
 import NewTask from '../NewTask'
 import TodoLists from '../TodoLists'
 import Head from '../../components/Head'
+
 /**
 * @author
 * @function TodoLists
@@ -10,13 +11,19 @@ import Head from '../../components/Head'
 
 const TodoPage = (props) => {
     return (
-        <div className="container">
-            <div className="left-side">
-                <Head name="New Task" />
-                <NewTask />
+        <>
+            <div className="container">
+                <div className="left-side">
+                    <Head name="New Task" />
+                    <NewTask />
+                </div>
+                <div className="line"></div>
+                <TodoLists />
+
             </div>
-            <TodoLists />
-        </div>
+            
+        </>
+
     )
 
 }
